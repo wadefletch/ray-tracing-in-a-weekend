@@ -21,7 +21,7 @@ public:
         auto u = unit_vector(cross(vup, w));
         auto v = cross(w, u);
 
-        origin = point3(0, 0, 0);
+        origin = lookfrom;
         horizontal = viewport_width * u;
         vertical = viewport_height * v;
         lower_left_corner = origin - horizontal / 2 - vertical / 2 - w;
