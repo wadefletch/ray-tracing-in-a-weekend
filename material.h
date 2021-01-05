@@ -63,7 +63,7 @@ public:
         double refraction_ratio = rec.front_face ? (1.0 / ir) : ir;
 
         vec3 unit_direction = unit_vector(r_in.direction());
-        vec3 refracted - refract(unit_direction, rec.normal, refraction_ratio);
+        vec3 refracted = refract(unit_direction, rec.normal, refraction_ratio);
 
         scattered = ray(rec.p, refracted);
         return true;
